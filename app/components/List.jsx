@@ -4,7 +4,7 @@ import { HiPencilAlt } from "react-icons/hi";
 
 const getList = async() =>{
     try {
-        const res = await fetch('http://localhost:3000/api/data', {cache: 'no-store'})
+        const res = await fetch('https://deadline-gamma.vercel.app/api/data', {cache: 'no-store'})
 
         if(!res.ok){
             throw new Error('Failed to fetch Data')

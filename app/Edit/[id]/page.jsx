@@ -2,7 +2,7 @@ import EditForm from "@/app/components/EditForm";
 
 const getDataById = async (id) =>{
     try {
-        const res = await fetch(`http://localhost:3000/api/data/${id}`, {cache: 'no-store'})
+        const res = await fetch(`https://deadline-gamma.vercel.app/api/data/${id}`, {cache: 'no-store'})
 
         if(!res.ok){
             throw new Error('Failed to fetch Data')
