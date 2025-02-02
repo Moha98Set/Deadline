@@ -31,7 +31,7 @@ export default async function List(){
             <div className="p-2 font-bold text-xl">شهرستان</div>
             <div className="p-2 font-bold text-xl">تلفن</div>
             <div className="p-2 font-bold text-xl">تاریخچه مصرف سوخت</div>   
-            <div className="p-2 font-bold text-xl"> ویرایش و حذف</div>
+            <div className="p-2 font-bold text-xl">ویرایش و حذف</div>
         </div>
         {data.map((item, index) => (
             <div key={index} className="justify-between">
