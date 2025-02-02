@@ -5,7 +5,7 @@ const getDataById = async (id) =>{
         const res = await fetch(`/api/data/${id}`, {cache: 'no-store'})
 
         if(!res.ok){
-            throw new Error('Failed to fetch Data')
+            throw new Error('Failed to fetch Data.')
         }
         console.log(res)
         return res.json()
