@@ -55,7 +55,7 @@ export default function EditForm({
         e.preventDefault()
 
         try {
-            const res = await fetch(`https://deadline-gamma.vercel.app/api/data/${id}`, {
+            const res = await fetch(`/api/data/${id}`, {
                 method: 'PUT',
                 headers:{
                     'Content-type': 'application/json'

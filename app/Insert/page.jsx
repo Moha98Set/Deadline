@@ -59,7 +59,7 @@ export default function Insert(){
          }
 
          try {
-            const res = await fetch('http://localhost:3000/api/data', {
+            const res = await fetch('/api/data', {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"
