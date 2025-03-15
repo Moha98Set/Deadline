@@ -1,5 +1,4 @@
 import Navbar from "./components/Navbar";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 
 export const metadata = {
@@ -13,7 +12,6 @@ export default function RootLayout({ children }) {
       <body className="max-w mx-auto p-4 font-diruz">
         <Navbar />
         {children}
-        <SpeedInsights />
       </body>
     </html>
   );

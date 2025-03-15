@@ -4,65 +4,38 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 
 export default function Insert(){ 
-    const [name, setName] = useState("")
-    const [age, setAge] = useState("")
-    const [from, setFrom] = useState("")
-    const [nationalcode, setNationalcode] = useState("")    
-    const [phone, setPhone] = useState("")
-    const [vehicle, setVehicle] = useState("")
-    const [model, setMdoel] = useState("")
-    const [fuel, setFuel] = useState("")
-    const [email, setEmail] = useState("")
-    const [owner, setOwner] = useState("")
-    const [ownercode, setOwnercode] = useState("")
-    const [province, setProvince] = useState("")
-    const [city, setCity] = useState("")
-    const [address, setAddress] = useState("")
-    const [staticphone, setStaticphone] = useState("")
-    const [lat, setLat] = useState("")
-    const [long, setLong] = useState("")
-    const [product, setProduct] = useState("")
-    const [typsof, setTypsof] = useState("")
-    const [partners, setPartners] = useState("")    
-    const [watersource, setWatersource] = useState("")
+    const [name, setName] = useState()
+    const [age, setAge] = useState()
+    const [from, setFrom] = useState()
+    const [nationalcode, setNationalcode] = useState()    
+    const [phone, setPhone] = useState()
+    const [vehicle, setVehicle] = useState()
+    const [model, setMdoel] = useState()
+    const [fuel, setFuel] = useState()
+    const [email, setEmail] = useState()
+    const [owner, setOwner] = useState()
+    const [ownercode, setOwnercode] = useState()
+    const [province, setProvince] = useState()
+    const [city, setCity] = useState()
+    const [address, setAddress] = useState()
+    const [staticphone, setStaticphone] = useState()
+    const [lat, setLat] = useState()
+    const [long, setLong] = useState()
+    const [product, setProduct] = useState()
+    const [typsof, setTypsof] = useState()
+    const [partners, setPartners] = useState()    
+    const [watersource, setWatersource] = useState()
 
     const router = useRouter()
 
-    const handlerSubmit = async (e) => {
+    const handlerSubmit = async(e) => {
         e.prevendivefault()
 
-        if(
-            !name ||
-            !age ||
-            !from ||
-            !nationalcode ||
-            !phone ||
-            !vehicle ||
-            !model ||
-            !fuel ||
-            !email ||
-            !owner ||
-            !ownercode ||
-            !province ||
-            !city ||
-            !address ||
-            !staticphone ||
-            !lat ||
-            !long ||
-            !product ||
-            !typsof ||
-            !partners ||
-            !watersource
-         ){
-            alert('One of them is required')
-            return 
-         }
-
          try {
-            const res = await fetch('/api/data', {
+            const res = await fetch('http://localhost:3000/api/data', {
                 method: "POST",
-                headers: {
-                    "Content-type": "application/json"
+                headers:{
+                    'Content-type': 'application/json'
                 },
                 body: JSON.stringify({
                     name,
@@ -89,18 +62,86 @@ export default function Insert(){
                 })
             })
             if(!res.ok){
-                //router.push('/')
                 console.log(res)
             } else{
                 throw new Error('Failed to create Data')
             }
+            router.push('/')
          } catch (error) {
             console.log(error)
          }
     }
 
     return (
-
+        <>
+        <h1>
+        OBJECTID
+        coddashtf
+        idcodf
+        codostanif
+        OBJECTID_1
+        F1
+        serial_form
+        code_shahrestan
+        name_shahrestan
+        code_bakhsh
+        name_bakhsh
+        code_dehestan
+        name_dehestan
+        code_abadi
+        name_abadi
+        code_markaze_khadamat
+        name_markaze_khadamat
+        code_dasht
+        name_dasht
+        shomare_ghete
+        masahat
+        vaziat
+        shomare_ghete_asli
+        noe_manba_abi
+        name_manba_abi
+        noe_bahre_bardar
+        tedade_shoraka_1
+        tedade_shoraka_2
+        vaziat_malekiat
+        pelake_sabti_code_bakhsh
+        pelake_sabti_asli
+        pelake_sabti_fari
+        name_bahre_bardar
+        name_khanevadegi_bahre_bardar
+        name_pedar_bahre_bardar
+        code_meli_bahre_bardar
+        tahsilat_bahre_bardar
+        reshte_tahsili_bahre_bardar
+        telefone_bahre_bardar
+        telefone_hamrah_bahre_bardar
+        mahsul_1
+        mahsul_2
+        mahsul_3
+        mahsul_4
+        vaziat_ghete
+        code_posti_bahre_bardar
+        address_bahre_bardar
+        noe_malekiat
+        name_malek
+        name_khanevadegi_malek
+        name_pedar_malek
+        code_meli_malek
+        telefone_hamrah_malek
+        jensiat_malek
+        name_malek_hoquqi
+        shomare_naqshe
+        code_mahsul
+        name_mahsul
+        GPSX
+        GPSY
+        codostani
+        havi
+        xx
+        yy
+        Shape_Length
+        Shape_Area    
+        </h1>
     <div>
         <form method="POST" onSubmit={handlerSubmit} className="w-fit mx-auto bg-gray-50 border-gray-100 rounded-md p-5 font-diruz text-lg">
             <h1 className="text-2xl p-2 font-bold">مشخصات فردی</h1>
@@ -114,7 +155,7 @@ export default function Insert(){
                 <div className="p-2"><label>تاریخ تولد</label></div>
                 <div className=""><label>:</label></div>
                 <div className="p-2">
-                    <input onChange={(e) => setAge(e.target.value)} value={age} name="age" type='date' placeholder="1234/56/78" required
+                    <input onChange={(e) => setAge(e.target.value)} value={age} name="age" type='text' placeholder="1234/56/78" required
                            className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-700 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                 </div>
                 <div className="p-2"><label>صادره از</label></div>
@@ -252,7 +293,12 @@ export default function Insert(){
                     className="mr-2 text-white bg-blue-600 rounded-md p-2 shadow-lg hover:bg-white hover:text-black">ثبت
                 اطلاعات
             </button>
+            <button type='reset'
+                        className="mr-3 text-black rounded-md p-2 shadow-lg border-2 hover:bg-black hover:text-white">باز
+                    نویسی
+            </button>
         </form>
     </div>
+    </>
 )
 }

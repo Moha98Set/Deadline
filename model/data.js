@@ -1,27 +1,73 @@
 import mongoose , {Schema} from 'mongoose';
 
 const dataSchema = new mongoose.Schema({
-    name: { type: String, required: true }, // نام و نام خانوادگی
-    age: { type: Date, required: true }, // تاریخ تولد
-    from: { type: String, required: true }, // صادره از
-    nationalcode: { type: String, required: true }, // کد ملی
-    phone: { type: String, required: true }, // شماره تماس
-    vehicle: { type: String, required: true }, // نوع دستگاه
-    model: { type: String, required: true }, // مدل دستگاه
-    fuel: { type: String, required: true }, // مصرف سوخت
-    email: { type: String, required: true }, // ایمیل
-    owner: { type: String, required: true }, // نام مالک
-    ownercode: { type: String, required: true }, // کد ملی مالک
-    province: { type: String, required: true }, // استان
-    city: { type: String, required: true }, // شهرستان
-    address: { type: String, required: true }, // آدرس
-    staticphone: { type: String, required: true }, // شماره ثابت
-    lat: { type: String, required: true }, // طول جغرافیایی
-    long: { type: String, required: true }, // عرض جغرافیایی
-    product: { type: String, required: true }, // محصول
-    typsof: { type: String, required: true }, // نوع کشت
-    partners: { type: Number, required: true }, // تعداد شرکا
-    watersource: { type: String, required: true }, // منبع آبی
+    OBJECTID: { type: String, required: true },
+    coddashtf: { type: String, required: true },
+    idcodf: { type: String, required: true },
+    codostanif: { type: String, required: true },
+    OBJECTID_1: { type: String, required: true },
+    F1: { type: String, required: true },
+    serial_form: { type: String, required: true },
+    code_shahrestan: { type: String, required: true },
+    name_shahrestan: { type: String, required: true },
+    code_bakhsh: { type: String, required: true },
+    name_bakhsh: { type: String, required: true },
+    code_dehestan: { type: String, required: true },
+    name_dehestan: { type: String, required: true },
+    code_abadi: { type: String, required: true },
+    name_abadi: { type: String, required: true },
+    code_markaze_khadamat: { type: String, required: true },
+    name_markaze_khadamat: { type: String, required: true },
+    code_dasht: { type: String, required: true },
+    name_dasht: { type: String, required: true },
+    shomare_ghete: { type: String, required: true },
+    masahat: { type: String, required: true },
+    vaziat: { type: String, required: true },
+    shomare_ghete_asli: { type: String, required: true },
+    noe_manba_abi: { type: String, required: true },
+    name_manba_abi: { type: String, required: true },
+    noe_bahre_bardar: { type: String, required: true },
+    tedade_shoraka_1: { type: String, required: true },
+    tedade_shoraka_2: { type: String, required: true },
+    vaziat_malekiat: { type: String, required: true },
+    pelake_sabti_code_bakhsh: { type: String, required: true },
+    pelake_sabti_asli: { type: String, required: true },
+    pelake_sabti_fari: { type: String, required: true },
+    name_bahre_bardar: { type: String, required: true },
+    name_khanevadegi_bahre_bardar: { type: String, required: true },
+    name_pedar_bahre_bardar: { type: String, required: true },
+    code_meli_bahre_bardar: { type: String, required: true },
+    tahsilat_bahre_bardar: { type: String, required: true },
+    reshte_tahsili_bahre_bardar: { type: String, required: true },
+    telefone_bahre_bardar: { type: String, required: true },
+    telefone_hamrah_bahre_bardar: { type: String, required: true },
+    mahsul_1: { type: String, required: true },
+    mahsul_2: { type: String, required: true },
+    mahsul_3: { type: String, required: true },
+    mahsul_4: { type: String, required: true },
+    vaziat_ghete: { type: String, required: true },
+    code_posti_bahre_bardar: { type: String, required: true },
+    address_bahre_bardar: { type: String, required: true },
+    noe_malekiat: { type: String, required: true },
+    name_malek: { type: String, required: true },
+    name_khanevadegi_malek: { type: String, required: true },
+    name_pedar_malek: { type: String, required: true },
+    code_meli_malek: { type: String, required: true },
+    telefone_hamrah_malek: { type: String, required: true },
+    jensiat_malek: { type: String, required: true },
+    name_malek_hoquqi: { type: String, required: true },
+    shomare_naqshe: { type: String, required: true },
+    code_mahsul: { type: String, required: true },
+    name_mahsul: { type: String, required: true },
+    GPSX: { type: String, required: true },
+    GPSY: { type: String, required: true },
+    codostani: { type: String, required: true },
+    havi: { type: String, required: true },
+    xx: { type: String, required: true },
+    yy: { type: String, required: true },
+    Shape_Length: { type: String, required: true },
+    Shape_Area: { type: String, required: true },
+    coordinates: { type: [[[Number]]], required: true },
     }
 );
 
