@@ -4,7 +4,7 @@ import { HiPencilAlt } from "react-icons/hi";
 
 const getList = async() => {
     try {
-        const res = await fetch('http://localhost:3000/api/data?page=1')
+        const res = await fetch('http://localhost:3000/api/data?page=2')
 
         if(!res.ok){
             throw new Error('Failed to fetch Data')
