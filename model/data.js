@@ -67,7 +67,7 @@ const dataSchema = new mongoose.Schema({
     yy: { type: String, required: true },
     Shape_Length: { type: Number, required: true },
     Shape_Area: { type: Number, required: true },
-    coordinates: { type: [Number], required: true } 
+    coordinates: { type: [Number], required: true }
 });
 
 const Data = mongoose.models.Data || mongoose.model("Data", dataSchema);
