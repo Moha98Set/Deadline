@@ -5,49 +5,139 @@ import { useRouter } from "next/navigation";
 
 export default function EditForm({
     id,
-    name,
-    age,
-    from,
-    nationalcode,
-    phone,
-    vehicle,
-    model,
-    fuel,
-    email,
-    owner,
-    ownercode,
-    province,
-    city,
-    address,
-    staticphone,
-    lat,
-    long,
-    product,
-    typsof,
-    partners,
-    watersource
+    OBJECTID,
+    coddashtf,
+    idcodf,
+    codostanif,
+    OBJECTID_1,
+    F1,
+    serial_form,
+    code_shahrestan,
+    name_shahrestan,
+    code_bakhsh,
+    name_bakhsh,
+    code_dehestan,
+    name_dehestan,
+    code_abadi,
+    name_abadi,
+    code_markaze_khadamat,
+    name_markaze_khadamat,
+    code_dasht,
+    name_dasht,
+    shomare_ghete,
+    masahat,
+    vaziat,
+    shomare_ghete_asli,
+    noe_manba_abi,
+    name_manba_abi,
+    noe_bahre_bardar,
+    tedade_shoraka_1,
+    tedade_shoraka_2,
+    vaziat_malekiat,
+    pelake_sabti_code_bakhsh,
+    pelake_sabti_asli,
+    pelake_sabti_fari,
+    name_bahre_bardar,
+    name_khanevadegi_bahre_bardar,
+    name_pedar_bahre_bardar,
+    code_meli_bahre_bardar,
+    tahsilat_bahre_bardar,
+    reshte_tahsili_bahre_bardar,
+    telefone_bahre_bardar,
+    telefone_hamrah_bahre_bardar,
+    mahsul_1,
+    mahsul_2,
+    mahsul_3,
+    mahsul_4,
+    vaziat_ghete,
+    code_posti_bahre_bardar,
+    address_bahre_bardar,
+    noe_malekiat,
+    name_malek,
+    name_khanevadegi_malek,
+    name_pedar_malek,
+    code_meli_malek,
+    telefone_hamrah_malek,
+    jensiat_malek,
+    name_malek_hoquqi,
+    shomare_naqshe,
+    code_mahsul,
+    name_mahsul,
+    GPSX,
+    GPSY,
+    codostani,
+    havi,
+    xx,
+    yy,
+    Shape_Length,
+    Shape_Area
 }){
-    const [newName, setNewName] = useState(name);
-    const [newAge, setNewAge] = useState(age);
-    const [newFrom, setNewFrom] = useState(from);
-    const [newNationalcode, setNewNationalcode] = useState(nationalcode);
-    const [newPhone, setNewPhone] = useState(phone);
-    const [newVehicle, setNewVehicle] = useState(vehicle);
-    const [newModel, setNewModel] = useState(model);
-    const [newFuel, setNewFuel] = useState(fuel);
-    const [newEmail, setNewEmail] = useState(email);
-    const [newOwner, setNewOwner] = useState(owner);
-    const [newOwnercode, setNewOwnercode] = useState(ownercode);
-    const [newProvince, setNewProvince] = useState(province);
-    const [newCity, setNewCity] = useState(city);
-    const [newAddress, setNewAddress] = useState(address);
-    const [newStaticphone, setNewStaticphone] = useState(staticphone);
-    const [newLat, setNewLat] = useState(lat);
-    const [newLong, setNewLong] = useState(long);
-    const [newProduct, setNewProduct] = useState(product);
-    const [newTypsof, setNewTypsof] = useState(typsof);
-    const [newPartners, setNewPartners] = useState(partners) ;   
-    const [newWatersource, setNewWatersource] = useState(watersource);
+    const [newObjectid, setNewObjectid] = useState(OBJECTID);
+    const [newCoddashtf, setNewCoddashtf] = useState(coddashtf);
+    const [newIdcodf, setNewIdcodf] = useState(idcodf);
+    const [newCodostanif, setNewCodostanif] = useState(codostanif);
+    const [newObjectid1, setNewObjectid1] = useState(OBJECTID_1);
+    const [newF1, setNewF1] = useState(F1);
+    const [newSerialForm, setNewSerialForm] = useState(serial_form);
+    const [newCodeShahrestan, setNewCodeShahrestan] = useState(code_shahrestan);
+    const [newNameShahrestan, setNewNameShahrestan] = useState(name_shahrestan);
+    const [newCodeBakhsh, setNewCodeBakhsh] = useState(code_bakhsh);
+    const [newNameBakhsh, setNewNameBakhsh] = useState(name_bakhsh);
+    const [newCodeDehestan, setNewCodeDehestan] = useState(code_dehestan);
+    const [newNameDehestan, setNewNameDehestan] = useState(name_dehestan);
+    const [newCodeAbadi, setNewCodeAbadi] = useState(code_abadi);
+    const [newNameAbadi, setNewNameAbadi] = useState(name_abadi);
+    const [newCodeMarkazeKhadamat, setNewCodeMarkazeKhadamat] = useState(code_markaze_khadamat);
+    const [newNameMarkazeKhadamat, setNewNameMarkazeKhadamat] = useState(name_markaze_khadamat);
+    const [newCodeDasht, setNewCodeDasht] = useState(code_dasht);
+    const [newNameDasht, setNewNameDasht] = useState(name_dasht);
+    const [newShomareGhete, setNewShomareGhete] = useState(shomare_ghete);
+    const [newMasahat, setNewMasahat] = useState(masahat);
+    const [newVaziat, setNewVaziat] = useState(vaziat);
+    const [newShomareGheteAsli, setNewShomareGheteAsli] = useState(shomare_ghete_asli);
+    const [newNoeManbaAbi, setNewNoeManbaAbi] = useState(noe_manba_abi);
+    const [newNameManbaAbi, setNewNameManbaAbi] = useState(name_manba_abi);
+    const [newNoeBahreBardar, setNewNoeBahreBardar] = useState(noe_bahre_bardar);
+    const [newTedadeShoraka1, setNewTedadeShoraka1] = useState(tedade_shoraka_1);
+    const [newTedadeShoraka2, setNewTedadeShoraka2] = useState(tedade_shoraka_2);
+    const [newVaziatMalekiat, setNewVaziatMalekiat] = useState(vaziat_malekiat);
+    const [newPelakeSabtiCodeBakhsh, setNewPelakeSabtiCodeBakhsh] = useState(pelake_sabti_code_bakhsh);
+    const [newPelakeSabtiAsli, setNewPelakeSabtiAsli] = useState(pelake_sabti_asli);
+    const [newPelakeSabtiFari, setNewPelakeSabtiFari] = useState(pelake_sabti_fari);
+    const [newNameBahreBardar, setNewNameBahreBardar] = useState(name_bahre_bardar);
+    const [newNameKhanevadegiBahreBardar, setNewNameKhanevadegiBahreBardar] = useState(name_khanevadegi_bahre_bardar);
+    const [newNamePedareBahreBardar, setNewNamePedareBahreBardar] = useState(name_pedar_bahre_bardar);
+    const [newCodeMeliBahreBardar, setNewCodeMeliBahreBardar] = useState(code_meli_bahre_bardar);
+    const [newTahsilatBahreBardar, setNewTahsilatBahreBardar] = useState(tahsilat_bahre_bardar);
+    const [newReshteTahsiliBahreBardar, setNewReshteTahsiliBahreBardar] = useState(reshte_tahsili_bahre_bardar);
+    const [newTelefoneBahreBardar, setNewTelefoneBahreBardar] = useState(telefone_bahre_bardar);
+    const [newTelefoneHamrahBahreBardar, setNewTelefoneHamrahBahreBardar] = useState(telefone_hamrah_bahre_bardar);
+    const [newMahsul1, setNewMahsul1] = useState(mahsul_1);
+    const [newMahsul2, setNewMahsul2] = useState(mahsul_2);
+    const [newMahsul3, setNewMahsul3] = useState(mahsul_3);
+    const [newMahsul4, setNewMahsul4] = useState(mahsul_4);
+    const [newVaziatGhete, setNewVaziatGhete] = useState(vaziat_ghete);
+    const [newCodePostiBahreBardar, setNewCodePostiBahreBardar] = useState(code_posti_bahre_bardar);
+    const [newAddressBahreBardar, setNewAddressBahreBardar] = useState(address_bahre_bardar);
+    const [newNoeMalekiat, setNewNoeMalekiat] = useState(noe_malekiat);
+    const [newNameMalek, setNewNameMalek] = useState(name_malek);
+    const [newNameKhanevadegiMalek, setNewNameKhanevadegiMalek] = useState(name_khanevadegi_malek);
+    const [newNamePedareMalek, setNewNamePedareMalek] = useState(name_pedar_malek);
+    const [newCodeMeliMalek, setNewCodeMeliMalek] = useState(code_meli_malek);
+    const [newTelefoneHamrahMalek, setNewTelefoneHamrahMalek] = useState(telefone_hamrah_malek);
+    const [newJensiatMalek, setNewJensiatMalek] = useState(jensiat_malek);
+    const [newNameMalekHoquqi, setNewNameMalekHoquqi] = useState(name_malek_hoquqi);
+    const [newShomareNaqshe, setNewShomareNaqshe] = useState(shomare_naqshe);
+    const [newCodeMahsul, setNewCodeMahsul] = useState(code_mahsul);
+    const [newNameMahsul, setNewNameMahsul] = useState(name_mahsul);
+    const [newGpsx, setNewGpsx] = useState(GPSX);
+    const [newGpsy, setNewGpsy] = useState(GPSY);
+    const [newCodostani, setNewCodostani] = useState(codostani);
+    const [newHavi, setNewHavi] = useState(havi);
+    const [newXx, setNewXx] = useState(xx);
+    const [newYy, setNewYy] = useState(yy);
+    const [newShapeLength, setNewShapeLength] = useState(Shape_Length);
+    const [newShapeArea, setNewShapeArea] = useState(Shape_Area);
 
     const router = useRouter()
 
@@ -55,33 +145,78 @@ export default function EditForm({
         e.preventDefault()
 
         try {
-            const res = await fetch(`/api/data/${id}`, {
+            const res = await fetch(`http://localhost:3000/api/data/${id}`, {
                 method: 'PUT',
                 headers:{
                     'Content-type': 'application/json'
                 },
                 body: JSON.stringify({
-                    newName,
-                    newAge,
-                    newFrom,
-                    newNationalcode,
-                    newPhone,
-                    newVehicle,
-                    newModel,
-                    newFuel,
-                    newEmail,
-                    newOwner,
-                    newOwnercode,
-                    newProvince,
-                    newCity,
-                    newAddress,
-                    newStaticphone,
-                    newLat,
-                    newLong,
-                    newProduct,
-                    newTypsof,
-                    newPartners,
-                    newWatersource
+                    newObjectid,
+                    newCoddashtf,
+                    newIdcodf,
+                    newCodostanif,
+                    newObjectid1,
+                    newF1,
+                    newSerialForm,
+                    newCodeShahrestan,
+                    newNameShahrestan,
+                    newCodeBakhsh,
+                    newNameBakhsh,
+                    newCodeDehestan,
+                    newNameDehestan,
+                    newCodeAbadi,
+                    newNameAbadi,
+                    newCodeMarkazeKhadamat,
+                    newNameMarkazeKhadamat,
+                    newCodeDasht,
+                    newNameDasht,
+                    newShomareGhete,
+                    newMasahat,
+                    newVaziat,
+                    newShomareGheteAsli,
+                    newNoeManbaAbi,
+                    newNameManbaAbi,
+                    newNoeBahreBardar,
+                    newTedadeShoraka1,
+                    newTedadeShoraka2,
+                    newVaziatMalekiat,
+                    newPelakeSabtiCodeBakhsh,
+                    newPelakeSabtiAsli,
+                    newPelakeSabtiFari,
+                    newNameBahreBardar,
+                    newNameKhanevadegiBahreBardar,
+                    newNamePedareBahreBardar,
+                    newCodeMeliBahreBardar,
+                    newTahsilatBahreBardar,
+                    newReshteTahsiliBahreBardar,
+                    newTelefoneBahreBardar,
+                    newTelefoneHamrahBahreBardar,
+                    newMahsul1,
+                    newMahsul2,
+                    newMahsul3,
+                    newMahsul4,
+                    newVaziatGhete,
+                    newCodePostiBahreBardar,
+                    newAddressBahreBardar,
+                    newNoeMalekiat,
+                    newNameMalek,
+                    newNameKhanevadegiMalek,
+                    newNamePedareMalek,
+                    newCodeMeliMalek,
+                    newTelefoneHamrahMalek,
+                    newJensiatMalek,
+                    newNameMalekHoquqi,
+                    newShomareNaqshe,
+                    newCodeMahsul,
+                    newNameMahsul,
+                    newGpsx,
+                    newGpsy,
+                    newCodostani,
+                    newHavi,
+                    newXx,
+                    newYy,
+                    newShapeLength,
+                    newShapeArea
                 })
             })
 
