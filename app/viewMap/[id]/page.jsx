@@ -17,9 +17,11 @@ const getDataById = async (id) =>{
 async function ShowMap({ params }){
     const { id } = params
     const { data } = await getDataById(id)    
+
+    console.log('Coordinates',data)
     return(
         <>            
-            <ViewMap data={data.coordinates[0]} />            
+            <ViewMap data={data.coordinates[0]} />  
         </>
     )
 
