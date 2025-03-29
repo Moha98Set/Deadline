@@ -240,370 +240,381 @@ export default function EditForm({
                     <td className="p-2"><label>OBJECTID</label></td>
                     <td className=""><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewObjectid(e.target.value)} value={newObjectid} type="text" name="newObjectid" placeholder="OBJECTID" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>    
+                    <input onChange={(e) => setNewObjectid(e.target.value)} value={newObjectid} type="text" name="newObjectid" placeholder={OBJECTID} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>    
                     </td>
                     <td className="p-2"><label>Coddashtf</label></td>
                     <td className=""><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewCoddashtf(e.target.value)} value={newCoddashtf} type="text" name="newCoddashtf" placeholder="Coddashtf" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewCoddashtf(e.target.value)} value={newCoddashtf} type="text" name="newCoddashtf" placeholder={coddashtf} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
                     <td className="p-2"><label>Idcodf</label></td>
                     <td className=""><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewIdcodf(e.target.value)} value={newIdcodf} type="text" name="newIdcodf" placeholder="Idcodf" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>    
+                    <input onChange={(e) => setNewIdcodf(e.target.value)} value={newIdcodf} type="text" name="newIdcodf" placeholder={idcodf} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>    
                     </td>
                     <td className="p-2"><label>Codostanif</label></td>
                     <td className=""><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewCodostanif(e.target.value)} value={newCodostanif} type="text" name="newCodostanif" placeholder="Codostanif" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewCodostanif(e.target.value)} value={newCodostanif} type="text" name="newCodostanif" placeholder={codostanif} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
                 </tr>
                 <tr>
                     <td className="p-2"><label>Objectid1</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewObjectid1(e.target.value)} value={newObjectid1} type="text" name="newObjectid1" placeholder="Objectid1" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewObjectid1(e.target.value)} value={newObjectid1} type="text" name="newObjectid1" placeholder={OBJECTID_1} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
                     <td className="p-2"><label>F1</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewF1(e.target.value)} value={newF1} type="text" name="newF1" placeholder="F1" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewF1(e.target.value)} value={newF1} type="text" name="newF1" placeholder={F1} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
-                    <td className="p-2"><label>Serial Form</label></td>
+                    <td className="p-2"><label>سریال فرم</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewSerialForm(e.target.value)} value={newSerialForm} type="text" name="newSerialForm" placeholder="Serial Form" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewSerialForm(e.target.value)} value={newSerialForm} type="text" name="newSerialForm" placeholder={serial_form} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
-                    <td className="p-2"><label>Code Shahrestan</label></td>
+                    <td className="p-2"><label>کد شهرستان</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewCodeShahrestan(e.target.value)} value={newCodeShahrestan} type="text" name="newCodeShahrestan" placeholder="Code Shahrestan" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>    
+                    <input onChange={(e) => setNewCodeShahrestan(e.target.value)} value={newCodeShahrestan} type="text" name="newCodeShahrestan" placeholder={code_shahrestan} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>    
                     </td>
                 </tr>
                 <tr>
-                    <td className="p-2"><label>ایمیل</label></td>
+                    <td className="p-2"><label>نام شهرستان</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewNameShahrestan(e.target.value)} value={newNameShahrestan} type="text" name="newNameShahrestan" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>    
+                    <input onChange={(e) => setNewNameShahrestan(e.target.value)} value={newNameShahrestan} type="text" name="newNameShahrestan" placeholder={name_shahrestan} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>    
                     </td>
 
                 </tr>
                 <br/>
                 <hr/>
                 <br/>
-                <th><h1 className="text-2xl p-2 align-top">مشخصات ملک</h1></th>
                 <tr>
+                    <td className="p-2"><label>کد بخش</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewCodeBakhsh(e.target.value)} value={newCodeBakhsh} type="text" name="newCodeBakhsh" placeholder={code_bakhsh} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>    
+                    </td>
+                    <td className="p-2"><label>نام بخش</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNameBakhsh(e.target.value)} value={newNameBakhsh} type="text" name="newNameBakhsh" placeholder={name_bakhsh} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>کد دهستان</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewCodeDehestan(e.target.value)} value={newCodeDehestan} type="text" name="newCodeDehestan" placeholder={code_dehestan} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>نام دهستان</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNameDehestan(e.target.value)} value={newNameDehestan} type="text" name="newNameDehestan" placeholder={name_dehestan} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td className="p-2"><label>کد آبادی</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewCodeAbadi(e.target.value)} value={newCodeAbadi} type="text" name="newCodeAbadi" placeholder={code_abadi} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>نام آبادی</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNameAbadi(e.target.value)} value={newNameAbadi} type="text" name="newNameAbadi" placeholder={name_abadi} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>کد مرکز خدمات</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewCodeMarkazeKhadamat(e.target.value)} value={newCodeMarkazeKhadamat} type="text" name="newCodeMarkazeKhadamat" placeholder={code_markaze_khadamat} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>نام مرکز خدمات</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNameMarkazeKhadamat(e.target.value)} value={newNameMarkazeKhadamat} type="text" name="newNameMarkazeKhadamat" placeholder={name_markaze_khadamat} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td className="p-2"><label>کد دشت</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewCodeDasht(e.target.value)} value={newCodeDasht} type="text" name="newCodeDasht" placeholder={code_dasht} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>نام دشت</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNameDasht(e.target.value)} value={newNameDasht} type="text" name="newNameDasht" placeholder={name_dasht} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>    
+                    </td>
+                    <td className="p-2"><label>شماره قطعه</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewShomareGhete(e.target.value)} value={newShomareGhete} type="text" name="newShomareGhete" placeholder={shomare_ghete} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>مساحت</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewMasahat(e.target.value)} value={newMasahat} type="text" name="newMasahat" placeholder={masahat} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                </tr>
+                <br/>
+                <hr/>
+                <br/>
+                <tr>
+                    <td className="p-2"><label>وضعیت</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewVaziat(e.target.value)} value={newVaziat} type="text" name="newVaziat" placeholder={vaziat} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>شماره قطعه اصلی</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewShomareGheteAsli(e.target.value)} value={newShomareGheteAsli} type="text" name="newShomareGheteAsli" placeholder={shomare_ghete_asli} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>نوع منبع آبی</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNoeManbaAbi(e.target.value)} value={newNoeManbaAbi} type="text" name="newNoeManbaAbi" placeholder={noe_manba_abi} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>نام منبع آبی</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNameManbaAbi(e.target.value)} value={newNameManbaAbi} type="text" name="newNameManbaAbi" placeholder={name_manba_abi} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td className="p-2"><label>نوع بهره بردار</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNoeBahreBardar(e.target.value)} value={newNoeBahreBardar} type="text" name="newNoeBahreBardar" placeholder={noe_bahre_bardar} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>تعداد شرکا 1</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewTedadeShoraka1(e.target.value)} value={newTedadeShoraka1} type="text" name="newTedadeShoraka1" placeholder={tedade_shoraka_1} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>تعداد شرکا 2</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewTedadeShoraka2(e.target.value)} value={newTedadeShoraka2} type="text" name="newTedadeShoraka2" placeholder={tedade_shoraka_2} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>وضعیت مالکیت</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewVaziatMalekiat(e.target.value)} value={newVaziatMalekiat} type="text" name="newVaziatMalekiat" placeholder={vaziat_malekiat} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td className="p-2"><label>پلاک ثبتی کد بخش</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewPelakeSabtiCodeBakhsh(e.target.value)} value={newPelakeSabtiCodeBakhsh} type="text" name="newPelakeSabtiCodeBakhsh" placeholder={pelake_sabti_code_bakhsh} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>پلاک ثبتی اصلی</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewPelakeSabtiAsli(e.target.value)} value={newPelakeSabtiAsli} type="text" name="newPelakeSabtiAsli" placeholder={pelake_sabti_asli} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>پلاک ثبتی فرعی</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewPelakeSabtiFari(e.target.value)} value={newPelakeSabtiFari} type="text" name="newPelakeSabtiFari" placeholder={pelake_sabti_fari} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>نام بهره بردار</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNameBahreBardar(e.target.value)} value={newNameBahreBardar} type="text" name="newNameBahreBardar" placeholder={name_bahre_bardar} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>نام خانوادگی بهره بردار</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNameKhanevadegiBahreBardar(e.target.value)} value={newNameKhanevadegiBahreBardar} type="text" name="newNameKhanevadegiBahreBardar" placeholder={name_khanevadegi_bahre_bardar} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                </tr>
+                <br/>
+                <hr/>
+                <br/>
+                <tr>
+                    <td className="p-2"><label>نام پدر بهره بردار</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNamePedareBahreBardar(e.target.value)} value={newNamePedareBahreBardar} type="text" name="newNamePedareBahreBardar" placeholder={name_pedar_bahre_bardar} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>کد ملی بهره بردار</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewCodeMeliBahreBardar(e.target.value)} value={newCodeMeliBahreBardar} type="text" name="newCodeMeliBahreBardar" placeholder={code_meli_bahre_bardar} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>تحصیلات بهره بردار</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewTahsilatBahreBardar(e.target.value)} value={newTahsilatBahreBardar} type="text" name="newTahsilatBahreBardar" placeholder={tahsilat_bahre_bardar} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>رشته تحصیلی بهره بردار</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewReshteTahsiliBahreBardar(e.target.value)} value={newReshteTahsiliBahreBardar} type="text" name="newReshteTahsiliBahreBardar" placeholder={reshte_tahsili_bahre_bardar} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td className="p-2"><label>تلفن بهره بردار</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewTelefoneBahreBardar(e.target.value)} value={newTelefoneBahreBardar} type="text" name="newTelefoneBahreBardar" placeholder={telefone_bahre_bardar} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>تلفن همراه بهره بردار</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewTelefoneHamrahBahreBardar(e.target.value)} value={newTelefoneHamrahBahreBardar} type="text" name="newTelefoneHamrahBahreBardar" placeholder={telefone_hamrah_bahre_bardar} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>محصول 1</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewMahsul1(e.target.value)} value={newMahsul1} type="text" name="newMahsul1" placeholder={mahsul_1} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>محصول 2</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewMahsul2(e.target.value)} value={newMahsul2} type="text" name="newMahsul2" placeholder={mahsul_2} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td className="p-2"><label>محصول 3</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewMahsul3(e.target.value)} value={newMahsul3} type="text" name="newMahsul3" placeholder={mahsul_3} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>محصول 4</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewMahsul4(e.target.value)} value={newMahsul4} type="text" name="newMahsul4" placeholder={mahsul_4} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>وضعیت قطعه</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewVaziatGhete(e.target.value)} value={newVaziatGhete} type="text" name="newVaziatGhete" placeholder={vaziat_ghete} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>کد پستی بهره بردار</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewCodePostiBahreBardar(e.target.value)} value={newCodePostiBahreBardar} type="text" name="newCodePostiBahreBardar" placeholder={code_posti_bahre_bardar} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                </tr>
+                <br/>
+                <hr/>
+                <br/>
+                <tr>
+                    <td className="p-2"><label>آدرس بهره بردار</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewAddressBahreBardar(e.target.value)} value={newAddressBahreBardar} type="text" name="newAddressBahreBardar" placeholder={address_bahre_bardar} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>نوع مالکیت</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNoeMalekiat(e.target.value)} value={newNoeMalekiat} type="text" name="newNoeMalekiat" placeholder={noe_malekiat} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
                     <td className="p-2"><label>نام مالک</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewCodeBakhsh(e.target.value)} value={newCodeBakhsh} type="text" name="newCodeBakhsh" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>    
+                    <input onChange={(e) => setNewNameMalek(e.target.value)} value={newNameMalek} type="text" name="newNameMalek" placeholder={name_malek} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>نام خانوادگی مالک</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNameKhanevadegiMalek(e.target.value)} value={newNameKhanevadegiMalek} type="text" name="newNameKhanevadegiMalek" placeholder={name_khanevadegi_malek} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td className="p-2"><label>نام پدر مالک</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewNamePedareMalek(e.target.value)} value={newNamePedareMalek} type="text" name="newNamePedareMalek" placeholder={name_pedar_malek} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
                     <td className="p-2"><label>کد ملی مالک</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewNameBakhsh(e.target.value)} value={newNameBakhsh} type="text" name="newNameBakhsh" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewCodeMeliMalek(e.target.value)} value={newCodeMeliMalek} type="text" name="newCodeMeliMalek" placeholder={code_meli_malek} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
-                    <td className="p-2"><label>استان</label></td>
+                    <td className="p-2"><label>تلفن همراه مالک</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewCodeDehestan(e.target.value)} value={newCodeDehestan} type="text" name="newCodeDehestan" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewTelefoneHamrahMalek(e.target.value)} value={newTelefoneHamrahMalek} type="text" name="newTelefoneHamrahMalek" placeholder={telefone_hamrah_malek} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
-                    <td className="p-2"><label>شهرستان</label></td>
+                    <td className="p-2"><label>جنسیت مالک</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewNameDehestan(e.target.value)} value={newNameDehestan} type="text" name="newNameDehestan" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="p-2"><label>آدرس</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewCodeAbadi(e.target.value)} value={newCodeAbadi} type="text" name="newCodeAbadi" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>شماره ثابت</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewNameAbadi(e.target.value)} value={newNameAbadi} type="text" name="newNameAbadi" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>طول جغرافیایی</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewCodeMarkazeKhadamat(e.target.value)} value={newCodeMarkazeKhadamat} type="text" name="newCodeMarkazeKhadamat" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>عرض جغرافیایی</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewNameMarkazeKhadamat(e.target.value)} value={newNameMarkazeKhadamat} type="text" name="newNameMarkazeKhadamat" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewJensiatMalek(e.target.value)} value={newJensiatMalek} type="text" name="newJensiatMalek" placeholder={jensiat_malek} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
                 </tr>
                 <tr>
-                    <td className="p-2"><label>محصول</label></td>
+                    <td className="p-2"><label>نام مالک حقوقی</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewCodeDasht(e.target.value)} value={newCodeDasht} type="text" name="newCodeDasht" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewNameMalekHoquqi(e.target.value)} value={newNameMalekHoquqi} type="text" name="newNameMalekHoquqi" placeholder={name_malek_hoquqi} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
-                    <td className="p-2"><label>نوع کشت</label></td>
+                    <td className="p-2"><label>شماره نقشه</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewNameDasht(e.target.value)} value={newNameDasht} type="text" name="newNameDasht" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>    
+                    <input onChange={(e) => setNewShomareNaqshe(e.target.value)} value={newShomareNaqshe} type="text" name="newShomareNaqshe" placeholder={shomare_naqshe} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
-                    <td className="p-2"><label>تعداد شرکا</label></td>
+                    <td className="p-2"><label>کد محصول</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewShomareGhete(e.target.value)} value={newShomareGhete} type="text" name="newShomareGhete" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewCodeMahsul(e.target.value)} value={newCodeMahsul} type="text" name="newCodeMahsul" placeholder={code_mahsul} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
-                    <td className="p-2"><label>منبع آبی</label></td>
+                    <td className="p-2"><label>نام محصول</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewMasahat(e.target.value)} value={newMasahat} type="text" name="newMasahat" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewNameMahsul(e.target.value)} value={newNameMahsul} type="text" name="newNameMahsul" placeholder={name_mahsul} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                </tr>
+                <br/>
+                <hr/>
+                <br/>
+                <tr>
+                    <td className="p-2"><label>gpsX</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewGpsx(e.target.value)} value={newGpsx} type="text" name="newGpsx" placeholder={GPSX} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>gpsY</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewGpsy(e.target.value)} value={newGpsy} type="text" name="newGpsy" placeholder={GPSY} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2"><label>کد استانی</label></td>
+                    <td className="p-2"><label>:</label></td>
+                    <td className="p-2">
+                    <input onChange={(e) => setNewCodostani(e.target.value)} value={newCodostani} type="text" name="newCodostani" placeholder={codostani} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
                 </tr>
                 <tr>
-                    <td className="p-2"><label>محصول</label></td>
+                    <td className="p-2"><label>Havi</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewVaziat(e.target.value)} value={newVaziat} type="text" name="newVaziat" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewHavi(e.target.value)} value={newHavi} type="text" name="newHavi" placeholder={havi} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
-                    <td className="p-2"><label>نوع کشت</label></td>
+                    <td className="p-2"><label>XX</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewShomareGheteAsli(e.target.value)} value={newShomareGheteAsli} type="text" name="newShomareGheteAsli" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewXx(e.target.value)} value={newXx} type="text" name="newXx" placeholder={xx} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
-                    <td className="p-2"><label>تعداد شرکا</label></td>
+                    <td className="p-2"><label>YY</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewNoeManbaAbi(e.target.value)} value={newNoeManbaAbi} type="text" name="newNoeManbaAbi" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>منبع آبی</label></td>
+                    <input onChange={(e) => setNewYy(e.target.value)} value={newYy} type="text" name="newYy" placeholder={yy} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/></td>
+                    <td className="p-2"><label>Shape Length</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewNameManbaAbi(e.target.value)} value={newNameManbaAbi} type="text" name="newNameManbaAbi" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="p-2"><label>محصول</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewNoeBahreBardar(e.target.value)} value={newNoeBahreBardar} type="text" name="newNoeBahreBardar" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>نوع کشت</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewTedadeShoraka1(e.target.value)} value={newTedadeShoraka1} type="text" name="newTedadeShoraka1" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>تعداد شرکا</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewTedadeShoraka2(e.target.value)} value={newTedadeShoraka2} type="text" name="newTedadeShoraka2" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>منبع آبی</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewVaziatMalekiat(e.target.value)} value={newVaziatMalekiat} type="text" name="newVaziatMalekiat" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewShapeLength(e.target.value)} value={newShapeLength} type="text" name="newShapeLength" placeholder={Shape_Length} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
                 </tr>
                 <tr>
-                    <td className="p-2"><label>محصول</label></td>
+                    <td className="p-2"><label>Shape Area</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNewPelakeSabtiCodeBakhsh(e.target.value)} value={newPelakeSabtiCodeBakhsh} type="text" name="newPelakeSabtiCodeBakhsh" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>نوع کشت</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewPelakeSabtiAsli(e.target.value)} value={newPelakeSabtiAsli} type="text" name="newPelakeSabtiAsli" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>تعداد شرکا</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewPelakeSabtiFari(e.target.value)} value={newPelakeSabtiFari} type="text" name="newPelakeSabtiFari" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>منبع آبی</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewNameBahreBardar(e.target.value)} value={newNameBahreBardar} type="text" name="newNameBahreBardar" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="p-2"><label>محصول</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewNamePedareBahreBardar(e.target.value)} value={newNamePedareBahreBardar} type="text" name="newNamePedareBahreBardar" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>نوع کشت</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewCodeMeliBahreBardar(e.target.value)} value={newCodeMeliBahreBardar} type="text" name="newCodeMeliBahreBardar" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>تعداد شرکا</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewTahsilatBahreBardar(e.target.value)} value={newTahsilatBahreBardar} type="text" name="newTahsilatBahreBardar" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>منبع آبی</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewReshteTahsiliBahreBardar(e.target.value)} value={newReshteTahsiliBahreBardar} type="text" name="newReshteTahsiliBahreBardar" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="p-2"><label>محصول</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewTelefoneBahreBardar(e.target.value)} value={newTelefoneBahreBardar} type="text" name="newTelefoneBahreBardar" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>نوع کشت</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewTelefoneHamrahBahreBardar(e.target.value)} value={newTelefoneHamrahBahreBardar} type="text" name="newTelefoneHamrahBahreBardar" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>تعداد شرکا</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewMahsul1(e.target.value)} value={newMahsul1} type="text" name="newMahsul1" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>منبع آبی</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewMahsul2(e.target.value)} value={newMahsul2} type="text" name="newMahsul2" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="p-2"><label>محصول</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewMahsul3(e.target.value)} value={newMahsul3} type="text" name="newMahsul3" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>نوع کشت</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewMahsul4(e.target.value)} value={newMahsul4} type="text" name="newMahsul4" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>تعداد شرکا</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewVaziatGhete(e.target.value)} value={newVaziatGhete} type="text" name="newVaziatGhete" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>منبع آبی</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewCodePostiBahreBardar(e.target.value)} value={newCodePostiBahreBardar} type="text" name="newCodePostiBahreBardar" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="p-2"><label>محصول</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewAddressBahreBardar(e.target.value)} value={newAddressBahreBardar} type="text" name="newAddressBahreBardar" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>نوع کشت</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewNoeMalekiat(e.target.value)} value={newNoeMalekiat} type="text" name="newNoeMalekiat" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>تعداد شرکا</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewNameMalek(e.target.value)} value={newNameMalek} type="text" name="newNameMalek" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>منبع آبی</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewNameKhanevadegiMalek(e.target.value)} value={newNameKhanevadegiMalek} type="text" name="newNameKhanevadegiMalek" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="p-2"><label>محصول</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewNamePedareMalek(e.target.value)} value={newNamePedareMalek} type="text" name="newNamePedareMalek" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>نوع کشت</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewCodeMeliMalek(e.target.value)} value={newCodeMeliMalek} type="text" name="newCodeMeliMalek" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>تعداد شرکا</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewTelefoneHamrahMalek(e.target.value)} value={newTelefoneHamrahMalek} type="text" name="newTelefoneHamrahMalek" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>منبع آبی</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewJensiatMalek(e.target.value)} value={newJensiatMalek} type="text" name="newJensiatMalek" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="p-2"><label>محصول</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewNameMalekHoquqi(e.target.value)} value={newNameMalekHoquqi} type="text" name="newNameMalekHoquqi" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>نوع کشت</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewShomareNaqshe(e.target.value)} value={newShomareNaqshe} type="text" name="newShomareNaqshe" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>تعداد شرکا</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewCodeMahsul(e.target.value)} value={newCodeMahsul} type="text" name="newCodeMahsul" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>منبع آبی</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewNameMahsul(e.target.value)} value={newNameMahsul} type="text" name="newNameMahsul" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="p-2"><label>محصول</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewGpsx(e.target.value)} value={newGpsx} type="text" name="newGpsx" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>نوع کشت</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewGpsy(e.target.value)} value={newGpsy} type="text" name="newGpsy" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>تعداد شرکا</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewCodostani(e.target.value)} value={newCodostani} type="text" name="newCodostani" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>منبع آبی</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewCodostani(e.target.value)} value={newCodostani} type="text" name="newCodostani" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="p-2"><label>محصول</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewHavi(e.target.value)} value={newHavi} type="text" name="newHavi" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>نوع کشت</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewXx(e.target.value)} value={newXx} type="text" name="newXx" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                    <td className="p-2"><label>تعداد شرکا</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewYy(e.target.value)} value={newYy} type="text" name="newYy" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/></td>
-                    <td className="p-2"><label>منبع آبی</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewShapeLength(e.target.value)} value={newShapeLength} type="text" name="newShapeLength" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="p-2"><label>محصول</label></td>
-                    <td className="p-2"><label>:</label></td>
-                    <td className="p-2">
-                    <input onChange={(e) => setNewShapeArea(e.target.value)} value={newShapeArea} type="text" name="newShapeArea" placeholder="رضا رضایی" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNewShapeArea(e.target.value)} value={newShapeArea} type="text" name="newShapeArea" placeholder={Shape_Area} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>                    
                 </tr>
                 <br/>
