@@ -16,7 +16,7 @@ export default function RemoveBtn({ id }){
                 router.refresh()
             }
         }
-    }
+    } 
 
     return(
         <button onClick={removeData} className='text-red-400'>

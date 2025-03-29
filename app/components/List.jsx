@@ -4,7 +4,7 @@ import { HiPencilAlt } from "react-icons/hi";
 
 const getList = async() => {
     try {
-        const res = await fetch('http://localhost:3000/api/data?page=2')
+        const res = await fetch(`http://localhost:3000/api/data?page=1`)
 
         if(!res.ok){
             throw new Error('Failed to fetch Data')
@@ -17,8 +17,9 @@ const getList = async() => {
 }
 
 export default async function List(){
-    const { data } = await getList()
-    console.log(data)
+    const { data, page } = await getList()
+    console.log('Page',page)
+    console.log('Data',data)
     return (
     <>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -57,7 +58,7 @@ export default async function List(){
                       </th>
                   </tr>
               </thead>
-              <tbody >               
+              <tbody>     
                 {data.map((item, index) => (
                   <tr className="border-b border-gray-200 dark:border-gray-700" key={index}>
                       <th scope="row" className="px-6 py-4 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800">  
@@ -102,18 +103,11 @@ export default async function List(){
                           <RemoveBtn id={index._id} />
                         </div>
                       </td>
-                  </tr>
-                  
+                  </tr>                  
                   ))}
-                  </tbody>
+              </tbody>
           </table>
-          
-
       </div>
-        
     </>
     )
 }
-
-
-

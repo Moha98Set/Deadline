@@ -147,6 +147,6 @@ export async function PUT(request, {params}){
 export async function GET(request, {params}){
     const {id} = params;
     await connectMongoDb()
-    const data = await Data.findOne({_id: id})
+    const data = await Data.findOne({_id: id}).lean()
     return NextResponse.json({data}, {status: 200})
 }

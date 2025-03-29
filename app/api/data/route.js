@@ -160,11 +160,10 @@ export async function GET(req) {
     const limit = 10; // Number of records per page
     const skip = (page - 1) * limit; // Calculate how many records to skip
 
-    const data = await Data.find().skip(skip).limit(limit);
+    const data = await Data.find().skip(skip).limit(limit).lean();
     
     return NextResponse.json({ data, page });
 }
-
 
 export async function DELETE(request){
     const id = request.nextUrl.searchParams.get("id");

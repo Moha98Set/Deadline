@@ -21,7 +21,7 @@ async function ShowMap({ params }){
     console.log('Coordinates',data)
     return(
         <>            
-            <ViewMap data={data.coordinates[0]} />  
+            <ViewMap data={data.coordinates[0]} />
         </>
     )
 
