@@ -117,7 +117,7 @@ export default async function Edit({ params }){
         noe_bahre_bardar={noe_bahre_bardar}
         tedade_shoraka_1={tedade_shoraka_1}
         tedade_shoraka_2={tedade_shoraka_2}
-        vaziat_malekiat={vaziat}
+        vaziat_malekiat={vaziat_malekiat}
         pelake_sabti_code_bakhsh={pelake_sabti_code_bakhsh}
         pelake_sabti_asli={pelake_sabti_asli}
         pelake_sabti_fari={pelake_sabti_fari}
