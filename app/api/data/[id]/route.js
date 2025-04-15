@@ -1,152 +1,118 @@
-import connectMongoDb from "@/libs/mongodb";
-import Data from "@/model/data";
-import {NextResponse} from "next/server";
+import { NextResponse } from "next/server";
+import clientPromise from "@/libs/second";
+import { ObjectId } from "mongodb";
 
-export async function PUT(request, {params}){
-    const {id} = params;
-    const {
-        newObjectid : OBJECTID,
-        newCoddashtf : coddashtf,
-        newIdcodf : idcodf,
-        newCodostanif : codostanif,
-        newObjectid1 : OBJECTID_1,
-        newF1 : F1,
-        newSerialForm : serial_form,
-        newCodeShahrestan : code_shahrestan,
-        newNameShahrestan : name_shahrestan,
-        newCodeBakhsh : code_bakhsh,
-        newNameBakhsh : name_bakhsh,
-        newCodeDehestan : code_dehestan,
-        newNameDehestan : name_dehestan,
-        newCodeAbadi : code_abadi,
-        newNameAbadi : name_abadi,
-        newCodeMarkazeKhadamat : code_markaze_khadamat,
-        newNameMarkazeKhadamat : name_markaze_khadamat,
-        newCodeDasht : code_dasht,
-        newNameDasht : name_dasht,
-        newShomareGhete : shomare_ghete,
-        newMasahat : masahat,
-        newVaziat : vaziat,
-        newShomareGheteAsli : shomare_ghete_asli,
-        newNoeManbaAbi : noe_manba_abi,
-        newNameManbaAbi : name_manba_abi,
-        newNoeBahreBardar : noe_bahre_bardar,
-        newTedadeShoraka1 : tedade_shoraka_1,
-        newTedadeShoraka2 : tedade_shoraka_2,
-        newVaziatMalekiat : vaziat_malekiat,
-        newPelakeSabtiCodeBakhsh : pelake_sabti_code_bakhsh,
-        newPelakeSabtiAsli : pelake_sabti_asli,
-        newPelakeSabtiFari : pelake_sabti_fari,
-        newNameBahreBardar : name_bahre_bardar,
-        newNameKhanevadegiBahreBardar : name_khanevadegi_bahre_bardar,
-        newNamePedareBahreBardar : name_pedar_bahre_bardar,
-        newCodeMeliBahreBardar : code_meli_bahre_bardar,
-        newTahsilatBahreBardar : tahsilat_bahre_bardar,
-        newReshteTahsiliBahreBardar : reshte_tahsili_bahre_bardar,
-        newTelefoneBahreBardar : telefone_bahre_bardar,
-        newTelefoneHamrahBahreBardar : telefone_hamrah_bahre_bardar,
-        newMahsul1 : mahsul_1,
-        newMahsul2 : mahsul_2,
-        newMahsul3 : mahsul_3,
-        newMahsul4 : mahsul_4,
-        newVaziatGhete : vaziat_ghete,
-        newCodePostiBahreBardar : code_posti_bahre_bardar,
-        newAddressBahreBardar : address_bahre_bardar,
-        newNoeMalekiat : noe_malekiat,
-        newNameMalek : name_malek,
-        newNameKhanevadegiMalek : name_khanevadegi_malek,
-        newNamePedareMalek : name_pedar_malek,
-        newCodeMeliMalek : code_meli_malek,
-        newTelefoneHamrahMalek : telefone_hamrah_malek,
-        newJensiatMalek : jensiat_malek,
-        newNameMalekHoquqi : name_malek_hoquqi,
-        newShomareNaqshe : shomare_naqshe,
-        newCodeMahsul : code_mahsul,
-        newNameMahsul : name_mahsul,
-        newGpsx : GPSX,
-        newGpsy : GPSY,
-        newCodostani : codostani,
-        newHavi : havi,
-        newXx : xx,
-        newYy : yy,
-        newShapeLength : Shape_Length,
-        newShapeArea : Shape_Area
-    } = await request.json()
-    await connectMongoDb()
-    await Data.findByIdAndUpdate(id,{
-        OBJECTID,
-        coddashtf,
-        idcodf,
-        codostanif,
-        OBJECTID_1,
-        F1,
-        serial_form,
-        code_shahrestan,
-        name_shahrestan,
-        code_bakhsh,
-        name_bakhsh,
-        code_dehestan,
-        name_dehestan,
-        code_abadi,
-        name_abadi,
-        code_markaze_khadamat,
-        name_markaze_khadamat,
-        code_dasht,
-        name_dasht,
-        shomare_ghete,
-        masahat,
-        vaziat,
-        shomare_ghete_asli,
-        noe_manba_abi,
-        name_manba_abi,
-        noe_bahre_bardar,
-        tedade_shoraka_1,
-        tedade_shoraka_2,
-        vaziat_malekiat,
-        pelake_sabti_code_bakhsh,
-        pelake_sabti_asli,
-        pelake_sabti_fari,
-        name_bahre_bardar,
-        name_khanevadegi_bahre_bardar,
-        name_pedar_bahre_bardar,
-        code_meli_bahre_bardar,
-        tahsilat_bahre_bardar,
-        reshte_tahsili_bahre_bardar,
-        telefone_bahre_bardar,
-        telefone_hamrah_bahre_bardar,
-        mahsul_1,
-        mahsul_2,
-        mahsul_3,
-        mahsul_4,
-        vaziat_ghete,
-        code_posti_bahre_bardar,
-        address_bahre_bardar,
-        noe_malekiat,
-        name_malek,
-        name_khanevadegi_malek,
-        name_pedar_malek,
-        code_meli_malek,
-        telefone_hamrah_malek,
-        jensiat_malek,
-        name_malek_hoquqi,
-        shomare_naqshe,
-        code_mahsul,
-        name_mahsul,
-        GPSX,
-        GPSY,
-        codostani,
-        havi,
-        xx,
-        yy,
-        Shape_Length,
-        Shape_Area
-    })
-    return NextResponse.json({message: 'Data updated successfully'}, {status: 200})
+export async function PUT(request, context) {
+  try {
+    const { id } = context.params;
+    const body = await request.json();
+
+    // آماده‌سازی فیلدها برای آپدیت
+    const updateFields = {
+      OBJECTID: body.newObjectid,
+      coddashtf: body.newCoddashtf,
+      idcodf: body.newIdcodf,
+      codostanif: body.newCodostanif,
+      OBJECTID_1: body.newObjectid1,
+      F1: body.newF1,
+      serial_form: body.newSerialForm,
+      code_shahrestan: body.newCodeShahrestan,
+      name_shahrestan: body.newNameShahrestan,
+      code_bakhsh: body.newCodeBakhsh,
+      name_bakhsh: body.newNameBakhsh,
+      code_dehestan: body.newCodeDehestan,
+      name_dehestan: body.newNameDehestan,
+      code_abadi: body.newCodeAbadi,
+      name_abadi: body.newNameAbadi,
+      code_markaze_khadamat: body.newCodeMarkazeKhadamat,
+      name_markaze_khadamat: body.newNameMarkazeKhadamat,
+      code_dasht: body.newCodeDasht,
+      name_dasht: body.newNameDasht,
+      shomare_ghete: body.newShomareGhete,
+      masahat: body.newMasahat,
+      vaziat: body.newVaziat,
+      shomare_ghete_asli: body.newShomareGheteAsli,
+      noe_manba_abi: body.newNoeManbaAbi,
+      name_manba_abi: body.newNameManbaAbi,
+      noe_bahre_bardar: body.newNoeBahreBardar,
+      tedade_shoraka_1: body.newTedadeShoraka1,
+      tedade_shoraka_2: body.newTedadeShoraka2,
+      vaziat_malekiat: body.newVaziatMalekiat,
+      pelake_sabti_code_bakhsh: body.newPelakeSabtiCodeBakhsh,
+      pelake_sabti_asli: body.newPelakeSabtiAsli,
+      pelake_sabti_fari: body.newPelakeSabtiFari,
+      name_bahre_bardar: body.newNameBahreBardar,
+      name_khanevadegi_bahre_bardar: body.newNameKhanevadegiBahreBardar,
+      name_pedar_bahre_bardar: body.newNamePedareBahreBardar,
+      code_meli_bahre_bardar: body.newCodeMeliBahreBardar,
+      tahsilat_bahre_bardar: body.newTahsilatBahreBardar,
+      reshte_tahsili_bahre_bardar: body.newReshteTahsiliBahreBardar,
+      telefone_bahre_bardar: body.newTelefoneBahreBardar,
+      telefone_hamrah_bahre_bardar: body.newTelefoneHamrahBahreBardar,
+      mahsul_1: body.newMahsul1,
+      mahsul_2: body.newMahsul2,
+      mahsul_3: body.newMahsul3,
+      mahsul_4: body.newMahsul4,
+      vaziat_ghete: body.newVaziatGhete,
+      code_posti_bahre_bardar: body.newCodePostiBahreBardar,
+      address_bahre_bardar: body.newAddressBahreBardar,
+      noe_malekiat: body.newNoeMalekiat,
+      name_malek: body.newNameMalek,
+      name_khanevadegi_malek: body.newNameKhanevadegiMalek,
+      name_pedar_malek: body.newNamePedareMalek,
+      code_meli_malek: body.newCodeMeliMalek,
+      telefone_hamrah_malek: body.newTelefoneHamrahMalek,
+      jensiat_malek: body.newJensiatMalek,
+      name_malek_hoquqi: body.newNameMalekHoquqi,
+      shomare_naqshe: body.newShomareNaqshe,
+      code_mahsul: body.newCodeMahsul,
+      name_mahsul: body.newNameMahsul,
+      GPSX: body.newGpsx,
+      GPSY: body.newGpsy,
+      codostani: body.newCodostani,
+      havi: body.newHavi,
+      xx: body.newXx,
+      yy: body.newYy,
+      Shape_Length: body.newShapeLength,
+      Shape_Area: body.newShapeArea,
+    };
+
+    const client = await clientPromise;
+    const db = client.db("connect");
+    const collection = db.collection("viramap");
+
+    const result = await collection.updateOne(
+      { _id: new ObjectId(id) },
+      { $set: updateFields }
+    );
+
+    if (result.matchedCount === 0) {
+      return NextResponse.json({ error: "Not Found" }, { status: 404 });
+    }
+
+    return NextResponse.json({ message: "Data updated successfully" }, { status: 200 });
+  } catch (error) {
+    console.error("PUT error:", error);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  }
 }
 
-export async function GET(request, {params}){
-    const {id} = params;
-    await connectMongoDb()
-    const data = await Data.findOne({_id: id}).lean()
-    return NextResponse.json({data}, {status: 200})
+
+
+export async function GET(request, context) {
+  try {
+    const { id } = context.params;
+
+    const client = await clientPromise;
+    const db = client.db("connect");
+    const collection = db.collection("viramap");
+
+    const data = await collection.findOne({ _id: new ObjectId(id) });
+
+    return NextResponse.json({ data }, { status: 200 });
+  } catch (error) {
+    console.error("GET error:", error);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  }
 }
+

@@ -15,7 +15,7 @@ const getDataById = async (id) =>{
 }
 
 export default async function Edit({ params }){    
-    const { id } = params;
+    const { id } = await params
     const { data } = await getDataById(id)
     const {
         OBJECTID,

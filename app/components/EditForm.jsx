@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react"
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function EditForm({
@@ -234,8 +235,13 @@ export default function EditForm({
         <div>
             <form onSubmit={handleSubmit} method="POST"
                   className="w-fit mx-auto bg-gray-50 border-gray-100 rounded-md p-5 font-diruz text-lg">
-
-                <th><h1 className="text-2xl p-2">مشخصات فردی</h1></th>
+                    <div className="flex justify-between">
+                        <div><th><h1 className="text-2xl p-2">مشخصات فردی</h1></th></div>
+                        <div className="bg-green-500 p-3 w-fit text-white rounded-md text-lg border-2 border-black">
+                            <Link href={`/Edit/polygon/${id}`}><h1><span className="text-xl">اصلاح</span> Polygon</h1></Link>
+                        </div>
+                    </div>
+                
                 <tr>
                     <td className="p-2"><label>OBJECTID</label></td>
                     <td className=""><label>:</label></td>
@@ -256,6 +262,9 @@ export default function EditForm({
                     <td className=""><label>:</label></td>
                     <td className="p-2">
                     <input onChange={(e) => setNewCodostanif(e.target.value)} value={newCodostanif} type="text" name="newCodostanif" placeholder={codostanif} required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    </td>
+                    <td className="p-2">
+                        
                     </td>
                 </tr>
                 <tr>
