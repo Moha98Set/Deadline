@@ -2,9 +2,9 @@ import RemoveBtn from "./Remove";
 import Link from "next/link";
 import { HiPencilAlt } from "react-icons/hi";
 
-const getList = async() => {
+const getList = async(page) => {
     try {
-        const res = await fetch(`http://localhost:3000/api/data?page=1`)
+        const res = await fetch(`http://localhost:3000/api/data?page=${page}`)
 
         if(!res.ok){
             throw new Error('Failed to fetch Data')
@@ -19,7 +19,6 @@ const getList = async() => {
 export default async function List(){
     const { data, page } = await getList()
     console.log('Page',page)
-    console.log('Data',data)
     return (
     <>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -105,8 +104,33 @@ export default async function List(){
                       </td>
                   </tr>                  
                   ))}
-              </tbody>
+              </tbody>                
           </table>
+          <div className="p-5 w-full text-center">
+                  <div className="inline-flex -space-x-px text-sm">
+                    <div>
+                      <Link href='#' className="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</Link>
+                    </div>
+                    <div>
+                      <Link href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{page-2}</Link>
+                    </div>
+                    <div>
+                      <Link href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{page-1}</Link>
+                    </div>
+                    <div>
+                      <Link href="#" aria-current="page" className="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">{page}</Link>
+                    </div>
+                    <div>
+                      <Link href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{page+1}</Link>
+                    </div>
+                    <div>
+                      <Link href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{page+2}</Link>
+                    </div>
+                    <div>
+                      <Link href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</Link>
+                    </div>
+                  </div>
+                </div>
       </div>
     </>
     )

@@ -1,12 +1,13 @@
 'use client'
 
 import React from "react"
-import { MapContainer, TileLayer, Polygon, Marker } from "react-leaflet"
+import { MapContainer, TileLayer, Polygon } from "react-leaflet"
 import 'leaflet/dist/leaflet.css'
 import { Icon } from "leaflet"
 
+
 export default function ViewMap({data}){    
-    
+    console.log("What is this shit",data)
     const purpleOptions = { color: 'purple' }
     const greenOptions = { color: 'green' }
     const blueOptions = { color: 'blue' }
@@ -17,14 +18,15 @@ export default function ViewMap({data}){
     })
     return(
         <>
-        <div className="mx-auto w-fit items-center">            
-        <MapContainer center={[data[0][0], data[0][1]]} zoom={14} scrollWheelZoom={false} style={{width: '1750px', height: '850px'}}>
+        <div className="border-2">
+        <MapContainer center={[data[0][0][0], data[0][0][1]]} zoom={19} scrollWheelZoom={false} style={{width: '100%', height: '83vh'}}>
             <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={[ data[0][0], data[0][1] ]} icon={cusIcon}>
-            </Marker>
-            <Polygon pathOptions={purpleOptions} positions={data} icon={cusIcon} />            
+                url='https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}'
+                maxZoom= {20}
+                attribution= 'Vira map'
+                subdomains={['mt1','mt2','mt3']}
+            />            
+            <Polygon pathOptions={purpleOptions} positions={data} icon={cusIcon} />
         </MapContainer>            
         </div>
         </>

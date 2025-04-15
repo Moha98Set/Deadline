@@ -1,4 +1,10 @@
-import ViewMap from "../page"
+'use client'
+
+import dynamic from 'next/dynamic';
+
+const ViewMap = dynamic(() => import('../../viewMap/page'), {
+  ssr: false,
+});
 
 const getDataById = async (id) =>{
     try {
@@ -18,10 +24,9 @@ async function ShowMap({ params }){
     const { id } = params
     const { data } = await getDataById(id)    
 
-    console.log('Coordinates',data)
     return(
         <>            
-            <ViewMap data={data.coordinates[0]} />
+            <ViewMap data={data.coordinates} />
         </>
     )
 

@@ -1,4 +1,27 @@
+/* Leaflet base styles 
+@import 'leaflet/dist/leaflet.css';
+
+
+/* Leaflet Draw styles 
+@import 'leaflet-draw/dist/leaflet.draw.css';
+
+ Leaflet Measure styles 
+@import 'leaflet-measure/dist/leaflet-measure.css';
+*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* تغییر استایل نقاط در حال رسم پلیگان */
+.leaflet-div-icon.leaflet-editing-icon {
+    background-color: red !important;
+    border: 2px solid yellow !important;
+    border-radius: 50% !important;
+    width: 18px !important;
+    height: 18px !important;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  }
+  
+
 
