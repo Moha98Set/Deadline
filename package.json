@@ -15,18 +15,12 @@
     "module-alias": "^2.2.3",
     "mongodb": "^6.13.1",
     "mongoose": "^8.9.6",
-    "next": "^15.2.2",
-<<<<<<< Updated upstream
+    "next": "^15.3.0",
     "next-auth": "^4.24.7",
-    "react": "^19.0.0-rc.1",
-    "react-dom": "^19.0.0-rc.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "react-icons": "^5.4.0",
-    "react-leaflet": "^5.0.0-rc.2"
-=======
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.4.0"
->>>>>>> Stashed changes
+    "react-leaflet": "^5.0.0"
   },
   "devDependencies": {
     "postcss": "^8",
