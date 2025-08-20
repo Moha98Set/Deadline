@@ -7,7 +7,8 @@ export default function ViewMap({ id }) {
   const [polygonCoords, setPolygonCoords] = useState([])
   const sendToAPI = async (coords) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/data/polygon/${id}`, {
+      console.log('🌐 Sending to API with ID:', id)
+      const response = await fetch(`/api/data/polygon/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -15,14 +16,17 @@ export default function ViewMap({ id }) {
         body: JSON.stringify({ polygonCoords: coords }),
       })
   
-      if (!response.ok) throw new Error('Failed to update data')
+      if (!response.ok) {
+        const errorText = await response.text()
+        throw new Error(`Failed to update data: ${response.status} - ${errorText}`)
+      }
   
       const result = await response.json()
       console.log('✅ API:', result)
     } catch (error) {
       console.error('❌ Error:', error)
     }
-  }
+  }  
   
 
   useEffect(() => {
@@ -68,17 +72,14 @@ export default function ViewMap({ id }) {
         const latlngs = layer.getLatLngs()
         const points = latlngs[0] || latlngs[0][0]
         const coords = points.map((p) => (
-            [
-                p.lat,
-                p.lng
-            ]
+            [p.lat,p.lng]
         ))
-        setPolygonCoords(coords) 
+        setPolygonCoords([coords]) 
         // ❗ گرفتن تایید کاربر
         const confirmSend = window.confirm("آیا از ارسال مختصات برای آپدیت مطمئن هستید؟")
       
         if (confirmSend) {
-          sendToAPI(coords)
+          sendToAPI([coords])
         } else {
           console.log("❌ ارسال مختصات لغو شد.")
         }
@@ -94,11 +95,11 @@ export default function ViewMap({ id }) {
   }, [])
 
   return (
-    <div style={{ padding: '1rem' }}>
+    <div className='z-0 fixed top-0 bottom-0 left-0 right-0'>
       <div
         id="mapid"
         style={{
-          height: '70vh',
+          height: '100%',
           width: '100%',
           borderRadius: '12px',
           overflow: 'hidden',

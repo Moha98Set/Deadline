@@ -7,9 +7,9 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  return (
+  return (    
     <html dir='rtl'>
-      <body className="max-w mx-auto p-4 font-diruz">
+      <body className="font-face-vz">
         <Navbar />
         {children}
       </body>

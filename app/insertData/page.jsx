@@ -4,165 +4,156 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 
 export default function Insert(){ 
-    const [OBJECTID, setOBJECTID] = useState();
-    const [coddashtf, setCoddashtf] = useState();
-    const [idcodf, setIdcodf] = useState();
-    const [codostanif, setCodostanif] = useState();
-    const [OBJECTID_1, setOBJECTID_1] = useState();
-    const [F1, setF1] = useState();
-    const [serialForm, setSerialForm] = useState();
-    const [codeShahrestan, setCodeShahrestan] = useState();
-    const [nameShahrestan, setNameShahrestan] = useState();
-    const [codeBakhsh, setCodeBakhsh] = useState();
-    const [nameBakhsh, setNameBakhsh] = useState();
-    const [codeDehestan, setCodeDehestan] = useState();
-    const [nameDehestan, setNameDehestan] = useState();
-    const [codeAbadi, setCodeAbadi] = useState();
-    const [nameAbadi, setNameAbadi] = useState();
-    const [codeMarkazeKhadamat, setCodeMarkazeKhadamat] = useState();
-    const [nameMarkazeKhadamat, setNameMarkazeKhadamat] = useState();
-    const [codeDasht, setCodeDasht] = useState();
-    const [nameDasht, setNameDasht] = useState();
-    const [shomareGhete, setShomareGhete] = useState();
-    const [masahat, setMasahat] = useState();
-    const [vaziat, setVaziat] = useState();
-    const [shomareGheteAsli, setShomareGheteAsli] = useState();
-    const [noeManbaAbi, setNoeManbaAbi] = useState();
-    const [nameManbaAbi, setNameManbaAbi] = useState();
-    const [noeBahreBardar, setNoeBahreBardar] = useState();
-    const [tedadeShoraka1, setTedadeShoraka1] = useState();
-    const [tedadeShoraka2, setTedadeShoraka2] = useState();
-    const [vaziatMalekiat, setVaziatMalekiat] = useState();
-    const [pelakeSabtiCodeBakhsh, setPelakeSabtiCodeBakhsh] = useState();
-    const [pelakeSabtiAsli, setPelakeSabtiAsli] = useState();
-    const [pelakeSabtiFari, setPelakeSabtiFari] = useState();
-    const [nameBahreBardar, setNameBahreBardar] = useState();
-    const [nameKhanevadegiBahreBardar, setNameKhanevadegiBahreBardar] = useState();
-    const [namePedarBahreBardar, setNamePedarBahreBardar] = useState();
-    const [codeMeliBahreBardar, setCodeMeliBahreBardar] = useState();
-    const [tahsilatBahreBardar, setTahsilatBahreBardar] = useState();
-    const [reshteTahsiliBahreBardar, setReshteTahsiliBahreBardar] = useState();
-    const [telefoneBahreBardar, setTelefoneBahreBardar] = useState();
-    const [telefoneHamrahBahreBardar, setTelefoneHamrahBahreBardar] = useState();
-    const [mahsul1, setMahsul1] = useState();
-    const [mahsul2, setMahsul2] = useState();
-    const [mahsul3, setMahsul3] = useState();
-    const [mahsul4, setMahsul4] = useState();
-    const [vaziatGhete, setVaziatGhete] = useState();
-    const [codePostiBahreBardar, setCodePostiBahreBardar] = useState();
-    const [addressBahreBardar, setAddressBahreBardar] = useState();
-    const [noeMalekiat, setNoeMalekiat] = useState();
-    const [nameMalek, setNameMalek] = useState();
-    const [nameKhanevadegiMalek, setNameKhanevadegiMalek] = useState();
-    const [namePedareMalek, setNamePedareMalek] = useState();
-    const [codeMeliMalek, setCodeMeliMalek] = useState();
-    const [telefoneHamrahMalek, setTelefoneHamrahMalek] = useState();
-    const [jensiatMalek, setJensiatMalek] = useState();
-    const [nameMalekHoquqi, setNameMalekHoquqi] = useState();
-    const [shomareNaqshe, setShomareNaqshe] = useState();
-    const [codeMahsul, setCodeMahsul] = useState();
-    const [nameMahsul, setNameMahsul] = useState();
-    const [gpsx, setGpsx] = useState();
-    const [gpsy, setGpsy] = useState();
-    const [codostani, setCodostani] = useState();
-    const [havi, setHavi] = useState();
-    const [xx, setXx] = useState();
-    const [yy, setYy] = useState();
-    const [shapeLength, setShapeLength] = useState();
-    const [shapeArea, setShapeArea] = useState();
-    const [coordinates, setCoordinates] = useState();
+    const [OBJECTID, setOBJECTID] = useState('');
+    const [coddashtf, setCoddashtf] = useState('');
+    const [idcodf, setIdcodf] = useState('');
+    const [codostanif, setCodostanif] = useState('');
+    const [OBJECTID_1, setOBJECTID_1] = useState('');
+    const [F1, setF1] = useState('');
+    const [serial_form, setSerialForm] = useState('');
+    const [code_shahrestan, setCodeShahrestan] = useState('');
+    const [name_shahrestan, setNameShahrestan] = useState('');
+    const [code_bakhsh, setCodeBakhsh] = useState('');
+    const [name_bakhsh, setNameBakhsh] = useState('');
+    const [code_dehestan, setCodeDehestan] = useState('');
+    const [name_dehestan, setNameDehestan] = useState('');
+    const [code_abadi, setCodeAbadi] = useState('');
+    const [name_abadi, setNameAbadi] = useState('');
+    const [code_markaze_khadamat, setCodeMarkazeKhadamat] = useState('');
+    const [name_markaze_khadamat, setNameMarkazeKhadamat] = useState('');
+    const [code_dasht, setCodeDasht] = useState('');
+    const [name_dasht, setNameDasht] = useState('');
+    const [shomare_ghete, setShomareGhete] = useState('');
+    const [masahat, setMasahat] = useState('');
+    const [vaziat, setVaziat] = useState('');
+    const [shomare_ghete_asli, setShomareGheteAsli] = useState('');
+    const [noe_manba_abi, setNoeManbaAbi] = useState('');
+    const [name_manba_abi, setNameManbaAbi] = useState('');
+    const [noe_bahre_bardar, setNoeBahreBardar] = useState('');
+    const [tedade_shoraka_1, setTedadeShoraka1] = useState('');
+    const [tedade_shoraka_2, setTedadeShoraka2] = useState('');
+    const [vaziat_malekiat, setVaziatMalekiat] = useState('');
+    const [pelake_sabti_code_bakhsh, setPelakeSabtiCodeBakhsh] = useState('');
+    const [pelake_sabti_asli, setPelakeSabtiAsli] = useState('');
+    const [pelake_sabti_fari, setPelakeSabtiFari] = useState('');
+    const [name_bahre_bardar, setNameBahreBardar] = useState('');
+    const [name_khanevadegi_bahre_bardar, setNameKhanevadegiBahreBardar] = useState('');
+    const [name_pedar_bahre_bardar, setNamePedarBahreBardar] = useState('');
+    const [code_meli_bahre_bardar, setCodeMeliBahreBardar] = useState('');
+    const [tahsilat_bahre_bardar, setTahsilatBahreBardar] = useState('');
+    const [reshte_tahsili_bahre_bardar, setReshteTahsiliBahreBardar] = useState('');
+    const [telefone_bahre_bardar, setTelefoneBahreBardar] = useState('');
+    const [telefone_hamrah_bahre_bardar, setTelefoneHamrahBahreBardar] = useState('');
+    const [mahsul_1, setMahsul1] = useState('');
+    const [mahsul_2, setMahsul2] = useState('');
+    const [mahsul_3, setMahsul3] = useState('');
+    const [mahsul_4, setMahsul4] = useState('');
+    const [vaziat_ghete, setVaziatGhete] = useState('');
+    const [code_posti_bahre_bardar, setCodePostiBahreBardar] = useState('');
+    const [address_bahre_bardar, setAddressBahreBardar] = useState('');
+    const [noe_malekiat, setNoeMalekiat] = useState('');
+    const [name_malek, setNameMalek] = useState('');
+    const [name_khanevadegi_malek, setNameKhanevadegiMalek] = useState('');
+    const [name_pedar_malek, setNamePedarMalek] = useState('');
+    const [code_meli_malek, setCodeMeliMalek] = useState('');
+    const [telefone_hamrah_malek, setTelefoneHamrahMalek] = useState('');
+    const [jensiat_malek, setJensiatMalek] = useState('');
+    const [name_malek_hoquqi, setNameMalekHoquqi] = useState('');
+    const [shomare_naqshe, setShomareNaqshe] = useState('');
+    const [code_mahsul, setCodeMahsul] = useState('');
+    const [name_mahsul, setNameMahsul] = useState('');
+    const [GPSX, setGpsx] = useState('');
+    const [GPSY, setGpsy] = useState('');
+    const [codostani, setCodostani] = useState('');
+    const [havi, setHavi] = useState('');
+    const [xx, setXx] = useState('');
+    const [yy, setYy] = useState('');
+    const [Shape_Length, setShapeArea] = useState('');
+    const [Shape_Area, setShapeLength] = useState('');
+    const [coordinates, setCoordinates] = useState('');
+
 
     const router = useRouter()
-
-    const sanitizeData = (data) => {
-        return Object.fromEntries(
-          Object.entries(data).map(([key, value]) => [key, String(value ?? '')])
-        );
-      };
-      
-
-    const formData = {
-        OBJECTID,
-        coddashtf,
-        idcodf,
-        codostanif,
-        OBJECTID_1,
-        F1,
-        serialForm,
-        codeShahrestan,
-        nameShahrestan,
-        codeBakhsh,
-        nameBakhsh,
-        codeDehestan,
-        nameDehestan,
-        codeAbadi,
-        nameAbadi,
-        codeMarkazeKhadamat,
-        nameMarkazeKhadamat,
-        codeDasht,
-        nameDasht,
-        shomareGhete,
-        masahat,
-        vaziat,
-        shomareGheteAsli,
-        noeManbaAbi,
-        nameManbaAbi,
-        noeBahreBardar,
-        tedadeShoraka1,
-        tedadeShoraka2,
-        vaziatMalekiat,
-        pelakeSabtiCodeBakhsh,
-        pelakeSabtiAsli,
-        pelakeSabtiFari,
-        nameBahreBardar,
-        nameKhanevadegiBahreBardar,
-        namePedarBahreBardar,
-        codeMeliBahreBardar,
-        tahsilatBahreBardar,
-        reshteTahsiliBahreBardar,
-        telefoneBahreBardar,
-        telefoneHamrahBahreBardar,
-        mahsul1,
-        mahsul2,
-        mahsul3,
-        mahsul4,
-        vaziatGhete,
-        codePostiBahreBardar,
-        addressBahreBardar,
-        noeMalekiat,
-        nameMalek,
-        nameKhanevadegiMalek,
-        namePedareMalek,
-        codeMeliMalek,
-        telefoneHamrahMalek,
-        jensiatMalek,
-        nameMalekHoquqi,
-        shomareNaqshe,
-        codeMahsul,
-        nameMahsul,
-        gpsx,
-        gpsy,
-        codostani,
-        havi,
-        xx,
-        yy,
-        shapeLength,
-        shapeArea,
-        coordinates
-      };
-
-    const cleanedData = sanitizeData(formData);
-
+    
     const handlerSubmit = async (e) => {
         e.preventDefault();
     
         try {
-            const res = await fetch('http://localhost:3000/api/data', {
+            const res = await fetch('/api/data', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(cleanedData)
+                body: JSON.stringify({
+                    OBJECTID,
+                    coddashtf,
+                    idcodf,
+                    codostanif,
+                    OBJECTID_1,
+                    F1,
+                    serial_form,
+                    code_shahrestan,
+                    name_shahrestan,
+                    code_bakhsh,
+                    name_bakhsh,
+                    code_dehestan,
+                    name_dehestan,
+                    code_abadi,
+                    name_abadi,
+                    code_markaze_khadamat,
+                    name_markaze_khadamat,
+                    code_dasht,
+                    name_dasht,
+                    shomare_ghete,
+                    masahat,
+                    vaziat,
+                    shomare_ghete_asli,
+                    noe_manba_abi,
+                    name_manba_abi,
+                    noe_bahre_bardar,
+                    tedade_shoraka_1,
+                    tedade_shoraka_2,
+                    vaziat_malekiat,
+                    pelake_sabti_code_bakhsh,
+                    pelake_sabti_asli,
+                    pelake_sabti_fari,
+                    name_bahre_bardar,
+                    name_khanevadegi_bahre_bardar,
+                    name_pedar_bahre_bardar,
+                    code_meli_bahre_bardar,
+                    tahsilat_bahre_bardar,
+                    reshte_tahsili_bahre_bardar,
+                    telefone_bahre_bardar,
+                    telefone_hamrah_bahre_bardar,
+                    mahsul_1,
+                    mahsul_2,
+                    mahsul_3,
+                    mahsul_4,
+                    vaziat_ghete,
+                    code_posti_bahre_bardar,
+                    address_bahre_bardar,
+                    noe_malekiat,
+                    name_malek,
+                    name_khanevadegi_malek,
+                    name_pedar_malek,
+                    code_meli_malek,
+                    telefone_hamrah_malek,
+                    jensiat_malek,
+                    name_malek_hoquqi,
+                    shomare_naqshe,
+                    code_mahsul,
+                    name_mahsul,
+                    GPSX,
+                    GPSY,
+                    codostani,
+                    havi,
+                    xx,
+                    yy,
+                    Shape_Length,
+                    Shape_Area,
+                    coordinates
+
+                })
             });
     
             if (!res.ok) {
@@ -170,7 +161,6 @@ export default function Insert(){
             }
     
             console.log('Data created successfully');
-            router.push('/');
         } catch (error) {
             console.log('Error:', error);
         }
@@ -180,8 +170,7 @@ export default function Insert(){
     <>
     <div>
     <form onSubmit={handlerSubmit} method="POST"
-                  className="w-fit mx-auto bg-gray-50 border-gray-100 rounded-md p-5 font-diruz text-lg">
-
+                  className="w-fit mx-auto bg-gray-50 border-gray-100 rounded-md p-5 font-diruz text-lg absolute top-16">
                 <th><h1 className="text-2xl p-2">مشخصات فردی</h1></th>
                 <tr>
                     <td className="p-2"><label>OBJECTID</label></td>
@@ -476,7 +465,7 @@ export default function Insert(){
                     <td className="p-2"><label>نام پدر مالک</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setNamePedareMalek(e.target.value)} type="text" name="NamePedareMalek" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setNamePedarMalek(e.target.value)} type="text" name="NamePedareMalek" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>
                     <td className="p-2"><label>کد ملی مالک</label></td>
                     <td className="p-2"><label>:</label></td>
@@ -566,7 +555,7 @@ export default function Insert(){
                     <td className="p-2"><label>Coordinates</label></td>
                     <td className="p-2"><label>:</label></td>
                     <td className="p-2">
-                    <input onChange={(e) => setShapeArea(e.target.value)} value='0' type="text" name="ShapeArea" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
+                    <input onChange={(e) => setCoordinates(e.target.value)} type="text" name="Coordinates" required className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 rounded-md"/>
                     </td>                   
                 </tr>
                 <br/>

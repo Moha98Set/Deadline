@@ -30,9 +30,11 @@ export async function GET(req) {
     const db = client.db("connect");
     const collection = db.collection("viramap");
 
-    const data = await collection.find().skip(94320).limit(limit).toArray();
+    const data = await collection.find().skip(skip).limit(limit).toArray();
 
-    return NextResponse.json({ data, page });
+    const total = await collection.countDocuments();
+
+    return NextResponse.json({ data, page, total });
   } catch (error) {
     console.error("GET error:", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
@@ -45,24 +47,20 @@ export async function DELETE(req) {
     const { searchParams } = new URL(req.url);
     const id = searchParams.get("id");
 
-    if (!id) {
-      return NextResponse.json({ error: "Missing ID" }, { status: 400 });
-    }
+    
 
     const client = await clientPromise;
     const db = client.db("connect");
     const collection = db.collection("viramap");
 
-    const { ObjectId } = require("mongodb");
     const deleted = await collection.findOneAndDelete({ _id: new ObjectId(id) });
 
-    if (!deleted.value) {
-      return NextResponse.json({ error: "Record not found" }, { status: 404 });
-    }
+    
 
-    return NextResponse.json({ message: "Deleted successfully", deleted: deleted.value });
+    return NextResponse.json({ message: "Deleted successfully" });
   } catch (error) {
     console.error("DELETE error:", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
+

@@ -99,9 +99,9 @@ export async function PUT(request, context) {
 
 
 
-export async function GET(request, context) {
+export async function GET(request, {params}) {
   try {
-    const { id } = context.params;
+    const { id } = params;
 
     const client = await clientPromise;
     const db = client.db("connect");

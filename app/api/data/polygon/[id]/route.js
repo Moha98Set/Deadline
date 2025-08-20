@@ -1,29 +1,37 @@
-import connectMongoDb from "@/libs/mongodb";
-import Data from "@/model/data";
+import { MongoClient, ObjectId } from "mongodb";
+
+const uri = process.env.MONGODB_URI;
+const client = new MongoClient(uri);
+const dbName = "connect"; // اینو با اسم دیتابیس واقعی‌ات جایگزین کن
 
 export async function PUT(req, { params }) {
   try {
-    await connectMongoDb()
-    const { id } = params
-    const body = await req.json()
+    const { id } = params;
+    const body = await req.json();
+    const polygonCoords = body.polygonCoords;
 
-    console.log('🛰️ ID:', id)
-    console.log('📦 Data received:', body)
+    console.log("📦 Received data for ID:", id);
+    console.log("🧭 New coordinates:", polygonCoords);
 
-    const result = await Data.findByIdAndUpdate(
-      id,
-      { $set: { coordinates: body.polygonCoords } },
-      { new: true }
-    )
+    await client.connect();
+    const db = client.db(dbName);
+    const collection = db.collection("viramap"); // اسم کلکشن واقعی‌ات رو بذار اینجا
 
-    if (!result) {
-      console.error('❌ Document not found')
-      return Response.json({ error: 'Not found' }, { status: 404 })
+    const result = await collection.updateOne(
+      { _id: new ObjectId(id) },
+      { $set: { coordinates: polygonCoords } }
+    );
+
+    if (result.matchedCount === 0) {
+      console.error("❌ No document found");
+      return new Response(JSON.stringify({ error: "Not found" }), { status: 404 });
     }
 
-    return Response.json({ message: 'Data updated successfully' })
+    return new Response(JSON.stringify({ message: "Data updated successfully" }), { status: 200 });
   } catch (err) {
-    console.error('❌ Update error:', err)
-    return Response.json({ error: 'Internal Server Error' }, { status: 500 })
+    console.error("❌ Error updating document:", err);
+    return new Response(JSON.stringify({ error: "Internal Server Error" }), { status: 500 });
+  } finally {
+    await client.close();
   }
 }
